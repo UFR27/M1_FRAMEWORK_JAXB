@@ -21,7 +21,7 @@ public class Course {
 		this.name = name;
 	}
 
-	@Valid
+	
 	@XmlElementWrapper(name = "students")
 	@XmlElement(name = "student")
 	public List<Student> getStudents() {

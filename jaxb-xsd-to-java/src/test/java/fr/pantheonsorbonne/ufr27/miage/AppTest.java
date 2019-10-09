@@ -25,11 +25,7 @@ import com.sun.xml.bind.api.JAXBRIContext;
  * Unit test for simple App.
  */
 public class AppTest {
-	/**
-	 * Rigorous Test :-)
-	 * 
-	 * @throws JAXBException
-	 */
+	
 	@Test
 	public void shouldAnswerWithTrue() throws JAXBException {
 		JAXBContext context = JAXBContext.newInstance(ObjectFactory.class);

@@ -8,8 +8,8 @@ public class Student {
 	String name;
 	double grade;
 
-	@NotNull
-	@NotEmpty
+	
+	
 	public String getName() {
 		return name;
 	}
@@ -18,7 +18,7 @@ public class Student {
 		this.name = name;
 	}
 
-	@DecimalMin("10.0")
+	
 	public double getGrade() {
 		return grade;
 	}
