@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <purchaseOrder orderDate="1999-10-20">
    <shipTo country="US">
-      <name>Alice Smith</name>
       <street>123 Maple Street</street>
       <city>Mill Valley</city>
       <state>CA</state>
