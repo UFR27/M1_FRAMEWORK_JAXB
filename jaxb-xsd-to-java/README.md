@@ -1,18 +1,6 @@
-Modifier le XSD pour qu'il contienne les types suivants:
+Modifier le XSD pour qu'il contienne les types correspondants à votre modélisation du problème suivant:
 
-1. AvailabilityNeutralRequest
-- date 
-- origine (le code IATA de la ville)
-- destination (le code IATA de la ville)
-- heure de départ: heure de départ
-
-2. AvailabilityNeutralResponse
-- identifiant du vol propre à la réponse
-- AF  identifiant de la compagnie aérienne
-- 623  identifiant du vold
-- Nombre de places restantes par classes
-- origine (le code IATA de l'aéroport)
-- destination (le code IATA de l'aéroport)
-- heure de départ
-- heure d’arrivée
-- durée du vol
+1. Une université dépend de plusieurs tutelles, qui ont un nom, un président et une année de création
+2. une université contient plusieurs facultés, qui ont un numéro identifiant de la forme "UFRXX" ou XX est un nombre compris entre 01 et 99 et un directeur
+3. au sein d'une faculté, on trouve plusieurs filières, qui ont toutes un directeurs et un nom 
+4. au sein des filières, on trouve a minima 1 parcours, composé d'au moins 1 diplome de type L, M ou D, ainsi qu'un directeur de formation.
