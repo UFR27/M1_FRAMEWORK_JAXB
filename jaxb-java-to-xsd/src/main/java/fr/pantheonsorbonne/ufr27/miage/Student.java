@@ -1,11 +1,17 @@
 package fr.pantheonsorbonne.ufr27.miage;
 
+import javax.validation.Valid;
 import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
+@Valid
 public class Student {
+	
+	@NotNull
 	String name;
+	@Min(10)
 	double grade;
 
 	

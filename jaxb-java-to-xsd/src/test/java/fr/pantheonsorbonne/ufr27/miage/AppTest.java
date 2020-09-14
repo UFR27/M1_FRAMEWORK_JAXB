@@ -82,7 +82,6 @@ public class AppTest {
 		s2.setGrade(9.0);
 
 		Student s3 = new Student();
-
 		s3.setGrade(11.0);
 
 		course.setStudents(Arrays.asList(s1, s2, s3));
@@ -98,7 +97,10 @@ public class AppTest {
 		Validator validator = factory.getValidator();
 
 		Set<ConstraintViolation<Course>> violations = validator.validate(course);
-		assertEquals(3, violations.size());
+		assertEquals(2, violations.size());
+		// we have to violations:
+		// student s3 has no name
+		// student s2 has grade < 10
 
 	}
 

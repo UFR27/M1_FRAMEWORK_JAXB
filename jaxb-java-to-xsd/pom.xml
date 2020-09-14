@@ -17,8 +17,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>14</maven.compiler.source>
+		<maven.compiler.target>14</maven.compiler.target>
 		<jaxb2.version>2.5.0</jaxb2.version>
 	</properties>
 
@@ -33,7 +33,7 @@
 		<dependency>
 			<groupId>org.hibernate.validator</groupId>
 			<artifactId>hibernate-validator</artifactId>
-			<version>6.0.17.Final</version>
+			 <version>6.1.5.Final</version>
 		</dependency>
 
 		<dependency>
