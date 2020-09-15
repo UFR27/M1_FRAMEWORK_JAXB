@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:panier
+	xmlns:tns="http://miage.ufr27.pantheonsorbonne.fr"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://miage.ufr27.pantheonsorbonne.fr ../../../target/generated-resources/schemagen/schema1.xsd ">
+	<tns:articles>
+		<tns:article>
+			<tns:denomination>Souris</tns:denomination>
+			<tns:prixUnitaire>10</tns:prixUnitaire>
+		</tns:article>
+		<tns:article>
+			<tns:denomination>Clavier</tns:denomination>
+			<tns:prixUnitaire>20</tns:prixUnitaire>
+		</tns:article>
+	</tns:articles>
+	<tns:client>
+
+		<tns:fname>Nicolas</tns:fname>
+		<tns:lname>Herbaut</tns:lname>
+		<tns:personneMorale>true</tns:personneMorale>
+		<tns:zipCode>33000</tns:zipCode>
+	</tns:client>
+	<tns:total>36.00</tns:total>
+</tns:panier>
