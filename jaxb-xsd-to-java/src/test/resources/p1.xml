@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:universite
+	xmlns:tns="http://miage.ufr27.pantheonsorbonne.fr"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://miage.ufr27.pantheonsorbonne.fr ../../main/xsd/univ.xsd "
+	nom="p1">
+	<tns:president nom="???"></tns:president>
+	<tns:tutelles creation="2001-01-01" nom="MESRI">
+		<tns:ministre nom="Videa" />
+	</tns:tutelles>
+	<tns:fac creation="2001-01-01" numero="UFR27">
+		<tns:directeur nom="Nazaret" />
+		<tns:filiere nom="MIAGE">
+			<tns:directeur nom="Salinesi" />
+			<tns:parcours nom="App">
+				<tns:directeur nom="Salinesi" />
+				<tns:diplome nom="M1" type="M">
+					<tns:directeur nom="Herbaut" />
+				</tns:diplome>
+			</tns:parcours>
+		</tns:filiere>
+	</tns:fac>
+</tns:universite>
