@@ -14,6 +14,7 @@
   <xsd:complexType name="PurchaseOrderType">
     <xsd:sequence>
       <xsd:element name="shipTo" type="USAddress"/>
+      <xsd:element name="toto" type="xsd:string"/>
       <xsd:element name="billTo" type="USAddress"/>
       <xsd:element ref="comment" minOccurs="0"/>
       <xsd:element name="items"  type="Items"/>
