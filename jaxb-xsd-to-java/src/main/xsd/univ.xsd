@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://miage.ufr27.pantheonsorbonne.fr"
+	elementFormDefault="qualified"
+	targetNamespace="http://miage.ufr27.pantheonsorbonne.fr" version="1.0">
+
+
+
+	<xs:element name="universite" type="tns:universite"></xs:element>
+
+	<xs:complexType name="universite">
+
+		<xs:sequence>
+			<xs:element name="president" type="tns:personne"></xs:element>
+			<xs:element name="tutelles" minOccurs="1" maxOccurs="1"
+				type="tns:tutelle"></xs:element>
+			<xs:element name="fac" minOccurs="1" maxOccurs="unbounded"
+				type="tns:fac"></xs:element>
+
+		</xs:sequence>
+		<xs:attribute name="nom" type="xs:string"></xs:attribute>
+	</xs:complexType>
+
+	<xs:complexType name="personne">
+		<xs:attribute name="nom" type="xs:string"></xs:attribute>
+
+	</xs:complexType>
+
+
+	<xs:complexType name="tutelle">
+		<xs:sequence>
+			<xs:element name="ministre" type="tns:personne"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="nom" type="xs:string"></xs:attribute>
+		<xs:attribute name="creation" type="xs:date"></xs:attribute>
+
+	</xs:complexType>
+
+	<xs:simpleType name="typeDiplome" final="restriction">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="L" />
+			<xs:enumeration value="M" />
+			<xs:enumeration value="D" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="diplome">
+		<xs:sequence>
+
+			<xs:element minOccurs="1" maxOccurs="1" name="directeur"
+				type="tns:personne"></xs:element>
+
+
+		</xs:sequence>
+		<xs:attribute name="nom" type="xs:string">
+
+		</xs:attribute>
+		<xs:attribute name="type" type="tns:typeDiplome"></xs:attribute>
+	</xs:complexType>
+
+	<xs:complexType name="parcours">
+		<xs:sequence>
+			<xs:element minOccurs="1" maxOccurs="1" name="directeur"
+				type="tns:personne"></xs:element>
+			<xs:element minOccurs="1" name="diplome"
+				type="tns:diplome">
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="nom" type="xs:string" />
+	</xs:complexType>
+
+	<xs:complexType name="filiere">
+		<xs:sequence>
+			<xs:element minOccurs="1" maxOccurs="1" name="directeur"
+				type="tns:personne"></xs:element>
+			<xs:element minOccurs="1" maxOccurs="unbounded"
+				name="parcours" type="tns:parcours"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="nom" type="xs:string" />
+	</xs:complexType>
+
+	<xs:complexType name="fac">
+		<xs:sequence>
+			<xs:element name="directeur" type="tns:personne"></xs:element>
+			<xs:element name="filiere" type="tns:filiere"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="numero" type="xs:string"></xs:attribute>
+		<xs:attribute name="creation" type="xs:date"></xs:attribute>
+
+	</xs:complexType>
+
+
+
+
+</xs:schema>
